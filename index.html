@@ -19,7 +19,7 @@
 <meta property="og:description" content="Accounting, taxation, GST, audit and advisory for businesses that want clarity.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AccountingService","name":"Meridian Associates","description":"Chartered accountants offering accounting, taxation, GST, audit and advisory services.","url":"https://www.example.com/","telephone":"+91-00000-00000","email":"hello@yourfirm.com","address":{"@type":"PostalAddress","streetAddress":"Office address","addressLocality":"City","addressRegion":"State","postalCode":"000000","addressCountry":"IN"},"areaServed":"IN","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"18:00"},"knowsAbout":["Accounting","Income tax","GST","Audit","Business advisory","Payroll"]}
 </script>
@@ -148,6 +148,86 @@ footer a{display:block;margin-bottom:8px}footer a:hover{color:#fff}
 .legal{max-width:1120px;margin:36px auto 0;padding:22px 24px 0;border-top:1px solid #23272a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:700px){footer .wrap{grid-template-columns:1fr}}
 
+
+:root{--gold:#c8a15a;--gold2:#e3c685}
+.btn{border-radius:4px;letter-spacing:.01em}
+.btn.gold{background:linear-gradient(135deg,#e3c685,#c8a15a);border-color:#c8a15a;color:#1a1608}
+.btn.gold:hover{background:linear-gradient(135deg,#f0d796,#d4ad66)}
+.eyebrow::before{content:"";display:inline-block;width:28px;height:1.5px;background:var(--gold);vertical-align:middle;margin-right:12px}
+.hl{font:italic 600 1.04em 'Playfair Display',Georgia,serif;letter-spacing:0;background:linear-gradient(100deg,#0b6b4f,#17b383,#0b6b4f);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite;padding-right:.04em}
+.dark .hl,.contact .hl,.hero .hl{background-image:linear-gradient(100deg,#c8a15a,#f3dca0,#c8a15a);background-size:220% 100%;-webkit-background-clip:text;background-clip:text}
+@keyframes shine{to{background-position:-220% 0}}
+
+nav{background:transparent;border:0;color:#fff;transition:background .3s,box-shadow .3s,color .3s}
+nav.solid{background:rgba(246,245,241,.97);color:var(--ink);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{height:76px}
+.topbar{background:rgba(5,9,8,.55);color:#cdd3d0;font-size:13px;overflow:hidden;max-height:40px;transition:max-height .3s;border-bottom:1px solid rgba(255,255,255,.08)}
+nav.solid .topbar{max-height:0;border:0}
+.tb{max-width:1120px;margin:0 auto;padding:0 24px;height:40px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.tbr{display:flex;gap:26px}.tbr a:hover{color:var(--gold2)}
+.logo{gap:12px}
+.logo i{width:36px;height:36px;border-radius:6px;background:linear-gradient(135deg,var(--em),#0e8a66);font-size:18px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.logo span{display:flex;flex-direction:column;line-height:1.15}
+.logo b{font:800 19px Manrope;letter-spacing:-.01em}
+.logo small{font:600 10.5px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.links a:hover{color:var(--gold)}
+nav.solid .links a:hover{color:var(--em)}
+.navcta{padding:11px 22px}
+.mcta{display:none}
+.menu{width:50px;height:50px;border-radius:8px;border:1px solid rgba(255,255,255,.4);background:none;color:inherit;cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+nav.solid .menu{border-color:var(--line)}
+.menu span{display:block;width:26px;height:2.5px;border-radius:2px;background:currentColor;transition:transform .3s,opacity .2s}
+.menu[aria-expanded=true] span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.menu[aria-expanded=true] span:nth-child(2){opacity:0}
+.menu[aria-expanded=true] span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+@media(max-width:860px){
+ .menu{display:flex}
+ .navcta{display:none}
+ nav .wrap{height:84px}
+ .logo b{font-size:22px}.logo small{font-size:11px}.logo i{width:42px;height:42px;font-size:21px}
+ .links{top:100%;background:#0f1a16;color:#fff;max-height:calc(100vh - 130px);overflow:auto;border-bottom:2px solid var(--gold)}
+ .links a{font:600 19px Manrope;padding:20px 24px;border-top:1px solid rgba(255,255,255,.1)}
+ .links a:hover{color:var(--gold2)}
+ .links .mcta{display:block;margin:18px 24px 22px;text-align:center;padding:16px;border:0;border-radius:4px;background:linear-gradient(135deg,#e3c685,#c8a15a);color:#1a1608;font-size:17px}
+ .links .mcta:hover{color:#1a1608}
+ .hide-m{display:none}.tb{justify-content:center;font-size:14px}
+}
+
+.hero{position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:190px 0 120px;border:0;background:#08130f;color:#fff}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{color:#fff;font-size:clamp(40px,6.2vw,78px);font-weight:800;line-height:1.08}
+.hero .sub{color:#d2d9d5}
+.hero .eyebrow{color:var(--gold2)}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+.hero .btn.ghost:hover{background:#fff;color:var(--ink)}
+.js .hero .wrap>div>*:nth-child(4){animation-delay:.36s}
+.hero .panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;border-radius:12px}
+.hero .panel li{border-top-color:rgba(255,255,255,.14)}
+.hero .panel li span:last-child{color:#b9c6bf}
+.slides,.shade{position:absolute;inset:0}
+.slide{position:absolute;inset:0;opacity:0;transform:scale(1.08);transition:opacity 1.6s ease,transform 9s linear}
+.slide.on{opacity:1;transform:scale(1)}
+.slide svg{width:100%;height:100%;display:block}
+.shade{z-index:1;background:linear-gradient(90deg,rgba(6,13,10,.88) 15%,rgba(6,13,10,.5)),linear-gradient(0deg,rgba(6,13,10,.7),transparent 35%)}
+.capin{position:absolute;z-index:2;left:max(24px,calc((100vw - 1120px)/2 + 24px));bottom:30px;display:flex;align-items:center;gap:18px;color:#cdd6d1;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.dots{display:flex;gap:8px}
+.dots i{width:26px;height:3px;background:rgba(255,255,255,.28);transition:background .4s,width .4s}
+.dots i.on{background:var(--gold2);width:44px}
+@media(max-width:860px){.hero{padding:150px 0 110px;min-height:auto}.shade{background:rgba(6,13,10,.72)}.capin{font-size:11px}}
+
+.ticker{background:#fff;border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0}
+.tk{display:flex;width:max-content;animation:tk 34s linear infinite}
+.tk div{display:flex;flex-shrink:0}
+.tk span{font:700 14px Manrope;letter-spacing:.16em;text-transform:uppercase;color:var(--em);white-space:nowrap}
+.tk span::after{content:"";display:inline-block;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);margin:0 38px;vertical-align:middle}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+.svc{position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--em),var(--gold));transition:width .45s}
+.svc:hover::after{width:100%}
+.dark .why div{border-top-color:#4a4330}
+.dark .why h3{color:var(--gold2)}
+.contact .details a{border-bottom-color:var(--gold)}
 #bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--em);z-index:60}
 nav{transition:box-shadow .3s}nav.solid{box-shadow:0 6px 24px -16px rgba(0,0,0,.35)}
 @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
@@ -176,22 +256,30 @@ button[disabled]{opacity:.6;cursor:wait}
 <a class="skip" href="#main">Skip to content</a>
 <div id="bar" aria-hidden="true"></div>
 
-<nav aria-label="Primary">
+<nav aria-label="Primary" id="nav">
+ <div class="topbar"><div class="tb">
+  <span class="hide-m">Monday to Saturday, 10:00 to 18:00</span>
+  <span class="tbr"><a href="tel:+910000000000">+91 00000 00000</a><a href="mailto:hello@yourfirm.com" class="hide-m">hello@yourfirm.com</a><a href="#contact" class="hide-m">Office address, City</a></span>
+ </div></div>
  <div class="wrap">
-  <a href="#top" class="logo"><i>M</i>Meridian Associates</a>
+  <a href="#top" class="logo"><i>M</i><span><b>Meridian Associates</b><small>Chartered Accountants</small></span></a>
   <div class="links" id="links">
    <a href="#services">Services</a><a href="#industries">Who we serve</a><a href="#process">How we work</a><a href="#faq">FAQ</a><a href="#about">About</a><a href="#contact">Contact</a>
+   <a href="#contact" class="mcta">Book a consultation</a>
   </div>
-  <a href="#contact" class="btn pri navcta">Book a consultation</a>
-  <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <a href="#contact" class="btn gold navcta">Book a consultation</a>
+  <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
  </div>
 </nav>
 
 <main id="main">
 <header class="hero" id="top">
+ <!-- Background slideshow. To use real photographs, replace a slide's style with: style="background-image:url(images/your-photo.jpg)" -->
+ <div class="slides" aria-hidden="true"><div class="slide on" style="background-image:linear-gradient(135deg,#0a1f19,#0b4a37)"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"><g fill="#fff" fill-opacity=".07"><rect x="760" y="560" width="90" height="340"/><rect x="880" y="470" width="90" height="430"/><rect x="1000" y="500" width="90" height="400"/><rect x="1120" y="380" width="90" height="520"/><rect x="1240" y="300" width="90" height="600"/><rect x="1360" y="190" width="90" height="710"/></g><polyline points="805,520 925,430 1045,460 1165,340 1285,260 1405,150" fill="none" stroke="#e3c685" stroke-opacity=".55" stroke-width="4"/></svg></div><div class="slide" style="background-image:linear-gradient(135deg,#0c1613,#123b2e)"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pg2" width="120" height="70" patternUnits="userSpaceOnUse"><path d="M0 70H120M120 0V70" stroke="#fff" stroke-opacity=".09" fill="none"/></pattern></defs><rect width="1600" height="900" fill="url(#pg2)"/><text x="1000" y="760" font-size="640" font-family="Georgia,serif" fill="#e3c685" fill-opacity=".11">&#8377;</text></svg></div><div class="slide" style="background-image:linear-gradient(135deg,#101a1e,#0b3a30)"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"><defs><pattern id="pg3" width="150" height="150" patternUnits="userSpaceOnUse"><rect x="20" y="20" width="110" height="110" rx="18" fill="#fff" fill-opacity=".06"/></pattern></defs><rect x="750" y="90" width="750" height="750" fill="url(#pg3)"/><rect x="920" y="390" width="110" height="110" rx="18" fill="#e3c685" fill-opacity=".3"/><rect x="1220" y="540" width="110" height="260" rx="18" fill="#12a37a" fill-opacity=".3"/></svg></div><div class="slide" style="background-image:linear-gradient(135deg,#0b1714,#0d5039)"><svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="90" transform="rotate(-90 1150 450)"><circle cx="1150" cy="450" r="260" stroke="#fff" stroke-opacity=".07"/><circle cx="1150" cy="450" r="260" stroke="#e3c685" stroke-opacity=".4" stroke-dasharray="560 1634"/><circle cx="1150" cy="450" r="260" stroke="#12a37a" stroke-opacity=".45" stroke-dasharray="380 1634" stroke-dashoffset="-600"/></g></svg></div></div><div class="shade"></div>
  <div class="wrap">
   <div>
-   <h1>Accounting and tax advice you can rely on.</h1>
+   <p class="eyebrow">Chartered Accountants</p>
+   <h1>Accounting and tax advice you <em class="hl">can rely on</em>.</h1>
    <p class="sub">Meridian Associates is a firm of chartered accountants handling bookkeeping, taxation, GST, audit and advisory for owner-managed businesses and professionals.</p>
    <div class="btns">
     <a class="btn pri" href="#contact">Book a consultation</a>
@@ -209,12 +297,14 @@ button[disabled]{opacity:.6;cursor:wait}
    </ul>
   </aside>
  </div>
+ <div class="capin"><span id="capt">Accounting and bookkeeping</span><span class="dots"><i class="on"></i><i></i><i></i><i></i></span></div>
 </header>
+<div class="ticker" aria-hidden="true"><div class="tk"><div><span>Accounting</span><span>Income Tax</span><span>GST</span><span>Audit</span><span>Advisory</span><span>Payroll</span></div><div><span>Accounting</span><span>Income Tax</span><span>GST</span><span>Audit</span><span>Advisory</span><span>Payroll</span></div></div></div>
 
 <section id="services">
  <div class="wrap">
   <p class="eyebrow">Services</p>
-  <h2 class="h2">Everything your finances need, handled by one team.</h2>
+  <h2 class="h2">Everything your finances need, handled by <em class="hl">one team</em>.</h2>
   <div class="grid3">
    <article class="svc"><h3>Accounting and bookkeeping</h3><p>Accurate books, reconciled regularly, with management reports you can actually read.</p></article>
    <article class="svc"><h3>Income tax</h3><p>Tax planning, advance tax, return filing and representation before the department.</p></article>
@@ -229,7 +319,7 @@ button[disabled]{opacity:.6;cursor:wait}
 <section class="dark">
  <div class="wrap">
   <p class="eyebrow">Our approach</p>
-  <h2 class="h2">What you can expect when you work with us.</h2>
+  <h2 class="h2">What you can expect when you <em class="hl">work with us</em>.</h2>
   <div class="why">
    <div><h3>Accuracy</h3><p>Figures are checked twice before they reach you or a filing portal.</p></div>
    <div><h3>Plain language</h3><p>We explain what the numbers mean and what to do about them.</p></div>
@@ -242,7 +332,7 @@ button[disabled]{opacity:.6;cursor:wait}
 <section id="industries">
  <div class="wrap">
   <p class="eyebrow">Who we serve</p>
-  <h2 class="h2">Support for businesses at every stage.</h2>
+  <h2 class="h2">Support for businesses at <em class="hl">every stage</em>.</h2>
   <div class="ind">
    <div><h3>Startups</h3><p>Incorporation, compliance set-up and early-stage books.</p></div>
    <div><h3>Small and medium businesses</h3><p>Reliable accounting and tax systems as you scale.</p></div>
@@ -256,7 +346,7 @@ button[disabled]{opacity:.6;cursor:wait}
 <section class="proc" id="process">
  <div class="wrap">
   <p class="eyebrow">How we work</p>
-  <h2 class="h2">A clear process from first meeting to ongoing support.</h2>
+  <h2 class="h2">A clear process from first meeting to <em class="hl">ongoing support</em>.</h2>
   <div class="steps" id="steps"><div class="track"></div><div class="fill" id="fill"></div>
    <div class="step"><small>01</small><h3>Understand</h3><p>We learn how your business earns, spends and reports.</p></div>
    <div class="step"><small>02</small><h3>Organise</h3><p>We set up records and workflows that fit your operations.</p></div>
@@ -270,7 +360,7 @@ button[disabled]{opacity:.6;cursor:wait}
 <section id="faq">
  <div class="wrap">
   <p class="eyebrow">Common questions</p>
-  <h2 class="h2">Answers before you pick up the phone.</h2>
+  <h2 class="h2">Answers <em class="hl">before</em> you pick up the phone.</h2>
   <div class="faq">
    <details><summary>Which businesses need GST registration?</summary><p>Registration depends on your annual turnover, the kind of goods or services you supply and whether you sell across state lines or online. We check your position against the current rules and register you if required.</p></details>
    <details><summary>Can you handle income tax or GST notices?</summary><p>Yes. Send us the notice as soon as it arrives. We review it, prepare the reply and represent you where needed.</p></details>
@@ -285,7 +375,7 @@ button[disabled]{opacity:.6;cursor:wait}
  <div class="wrap">
   <div>
    <p class="eyebrow">About the firm</p>
-   <h2 class="h2" style="margin-bottom:24px">Accounting that looks forward, not only back.</h2>
+   <h2 class="h2" style="margin-bottom:24px">Accounting that <em class="hl">looks forward</em>, not only back.</h2>
    <p>Records of what happened last quarter matter, but they are most useful when they help you decide what to do next.</p>
    <p>Meridian Associates combines careful compliance work with practical advice, so owners understand where the business stands and where it can go.</p>
    <a class="btn ghost" href="#contact">Talk to our team</a>
@@ -298,7 +388,7 @@ button[disabled]{opacity:.6;cursor:wait}
  <div class="wrap">
   <div>
    <p class="eyebrow">Contact</p>
-   <h2>Speak to a chartered accountant.</h2>
+   <h2>Speak to a <em class="hl">chartered accountant</em>.</h2>
    <p class="lead">Send us a few details and we will reply within one working day.</p>
    <p class="details">
     Phone and WhatsApp: <a href="tel:+910000000000">+91 00000 00000</a><br>
@@ -351,12 +441,22 @@ button[disabled]{opacity:.6;cursor:wait}
 <script>
 (function(){
  var m=document.getElementById('menu'),l=document.getElementById('links');
- m.addEventListener('click',function(){var o=l.classList.toggle('open');m.setAttribute('aria-expanded',o)});
+ m.addEventListener('click',function(){var o=l.classList.toggle('open');m.setAttribute('aria-expanded',o);m.setAttribute('aria-label',o?'Close menu':'Open menu')});
  l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');m.setAttribute('aria-expanded',false)}});
+
+ // Hero slideshow
+ var sl=document.querySelectorAll('.slide'),dt=document.querySelectorAll('.dots i'),cp=document.getElementById('capt'),
+  caps=['Accounting and bookkeeping','Taxation and GST','Audit and assurance','Business advisory'],k=0;
+ if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+  setInterval(function(){
+   sl[k].classList.remove('on');dt[k].classList.remove('on');k=(k+1)%sl.length;
+   sl[k].classList.add('on');dt[k].classList.add('on');cp.textContent=caps[k];
+  },5500);
+ }
 
  // Scroll animations
  var sel='.svc,.why>div,.ind>div,.step,.photo,.about .wrap>div:first-child,.h2,.eyebrow,.faq details,.contact .wrap>*';
- var els=[].slice.call(document.querySelectorAll(sel));
+ var els=[].slice.call(document.querySelectorAll(sel)).filter(function(el){return !el.closest('.hero')});
  els.forEach(function(el){
   var sib=[].filter.call(el.parentNode.children,function(c){return c.matches(sel)});
   el.style.setProperty('--d',(sib.indexOf(el)*0.09)+'s');el.classList.add('rv');
